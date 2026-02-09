@@ -16,8 +16,8 @@
 - **FullBookDownloadService**: 全本下载服务
 
 ### API接口
-- **端口**: 9999
-- **基础URL**: http://127.0.0.1:9999
+- **端口**: 8100
+- **基础URL**: http://127.0.0.1:8100
 
 ## 🚀 主要功能
 
@@ -120,7 +120,7 @@
 **application.yml**:
 ```yaml
 server:
-  port: 9999
+  port: 8100
   address: 0.0.0.0
 
 fq:
@@ -199,20 +199,20 @@ fqnovel-unidbg/
 ### 健康检查
 ```bash
 # FQNovel服务
-curl -X GET 'http://127.0.0.1:9999/api/fqnovel/health'
+curl -X GET 'http://127.0.0.1:8100/api/fqnovel/health'
 
 # 设备管理服务
-curl -X GET 'http://127.0.0.1:9999/api/device/health'
+curl -X GET 'http://127.0.0.1:8100/api/device/health'
 ```
 
 ### 功能测试
 ```bash
 # 设备注册
-curl -X POST 'http://127.0.0.1:9999/api/device/register' \
+curl -X POST 'http://127.0.0.1:8100/api/device/register' \
   -H 'Content-Type: application/json' -d '{}'
 
 # 章节批量获取
-curl -X POST 'http://127.0.0.1:9999/api/fqnovel/chapters/batch' \
+curl -X POST 'http://127.0.0.1:8100/api/fqnovel/chapters/batch' \
   -H 'Content-Type: application/json' \
   -d '{
     "bookId": "6707112755507235848",
@@ -220,7 +220,7 @@ curl -X POST 'http://127.0.0.1:9999/api/fqnovel/chapters/batch' \
   }'
 
 # 书籍信息获取
-curl -X GET 'http://127.0.0.1:9999/api/fqnovel/book/6707112755507235848'
+curl -X GET 'http://127.0.0.1:8100/api/fqnovel/book/6707112755507235848'
 ```
 
 ## 📈 版本历史

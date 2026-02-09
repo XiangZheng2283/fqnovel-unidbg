@@ -393,7 +393,7 @@ public class FullBookDownloadService {
                 directoryRequest.setNeedVersion(true);
                 
                 // 直接调用目录接口获取章节列表
-                String directoryUrl = "http://localhost:9999/api/fqsearch/directory/" + bookId;
+                String directoryUrl = "http://localhost:8100/api/fqsearch/directory/" + bookId;
                 log.info("调用目录接口获取章节列表 - URL: {}", directoryUrl);
                 
                 HttpRequest httpRequest = HttpRequest.newBuilder()

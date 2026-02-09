@@ -281,9 +281,9 @@ public class DeviceManagementService {
             "pkill -f \"unidbg-boot-server\" || echo \"没有找到现有进程\"\n" +
             "sleep 3\n" +
             "\n" +
-            "# 确保端口9999被释放\n" +
-            "echo \"[$(date)] 检查端口9999...\"\n" +
-            "lsof -ti:9999 | xargs kill -9 2>/dev/null || echo \"端口9999已释放\"\n" +
+            "# 确保端口8100被释放\n" +
+            "echo \"[$(date)] 检查端口8100...\"\n" +
+            "lsof -ti:8100 | xargs kill -9 2>/dev/null || echo \"端口8100已释放\"\n" +
             "sleep 2\n" +
             "\n" +
             "# 检查JAR文件是否存在\n" +

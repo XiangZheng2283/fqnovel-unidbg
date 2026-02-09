@@ -164,7 +164,7 @@
                                 <arg>chmod +x /entrypoint.sh &amp;&amp; /entrypoint.sh</arg>
                             </args>
                             <ports>
-                                <port>9999</port>
+                                <port>8100</port>
                             </ports>
                         </container>
                     </configuration>

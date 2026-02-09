@@ -20,7 +20,7 @@
 
 ### 1. 启动 FQNovel API 服务
 ```bash
-# 确保服务在 localhost:9999 运行
+# 确保服务在 localhost:8100 运行
 java -jar target/unidbg-boot-server-0.0.1-SNAPSHOT.jar
 ```
 
