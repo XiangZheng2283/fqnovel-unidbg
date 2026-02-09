@@ -13,7 +13,7 @@ FQNovel API 提供小说章节内容获取功能，使用 AES-128-CBC 加密和 
 
 ### 1. 健康检查
 ```
-GET /api/fqnovel/health
+GET /book/api/fqnovel/health
 ```
 
 响应示例：
@@ -27,7 +27,7 @@ GET /api/fqnovel/health
 
 ### 2. 获取单个章节内容 (新增)
 ```
-GET /api/fqnovel/item_id/{itemId}
+GET /book/api/fqnovel/item_id/{itemId}
 ```
 
 参数：
@@ -37,20 +37,20 @@ GET /api/fqnovel/item_id/{itemId}
 
 示例：
 ```bash
-curl "http://localhost:8100/api/fqnovel/item_id/7282975997584998953"
+curl "http://localhost:8100/book/api/fqnovel/item_id/7282975997584998953"
 ```
 
 ### 3. 获取章节内容 (兼容接口)
 ```
-GET /api/fqnovel/chapter/{bookId}/{chapterId}
-POST /api/fqnovel/chapter
+GET /book/api/fqnovel/chapter/{bookId}/{chapterId}
+POST /book/api/fqnovel/chapter
 ```
 
 这些接口保持向后兼容，但内部使用新的 API 模式。
 
 ### 4. 批量获取章节内容 (更新)
 ```
-POST /api/fqnovel/chapters/batch
+POST /book/api/fqnovel/chapters/batch
 ```
 
 请求体：
@@ -63,7 +63,7 @@ POST /api/fqnovel/chapters/batch
 
 ### 5. 批量获取章节内容 (新增 - 支持范围)
 ```
-POST /api/fqnovel/chapters/batch
+POST /book/api/fqnovel/chapters/batch
 ```
 
 请求体：
@@ -171,17 +171,17 @@ FqVariable var = new FqVariable();
 
 ### 获取书籍信息
 ```bash
-curl "http://localhost:8100/api/fqnovel/book/7276384138653862966"
+curl "http://localhost:8100/book/api/fqnovel/book/7276384138653862966"
 ```
 
 ### 获取单个章节
 ```bash
-curl "http://localhost:8100/api/fqnovel/item_id/7282975997584998953"
+curl "http://localhost:8100/book/api/fqnovel/item_id/7282975997584998953"
 ```
 
 ### 批量获取章节
 ```bash
-curl -X POST "http://localhost:8100/api/fqnovel/chapters/batch" \
+curl -X POST "http://localhost:8100/book/api/fqnovel/chapters/batch" \
   -H "Content-Type: application/json" \
   -d '{
     "bookId": "7276384138653862966",

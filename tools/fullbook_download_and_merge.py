@@ -33,7 +33,7 @@ def stream_fullbook_download(book_id: str, batch_size: int, max_chapters: int | 
     if max_chapters is not None:
         params['maxChapters'] = str(max_chapters)
 
-    url = f"{BASE}/api/fullbook/download?" + urllib.parse.urlencode(params)
+    url = f"{BASE}/book/api/fullbook/download?" + urllib.parse.urlencode(params)
     req = urllib.request.Request(url)
 
     start_ts = time.time()

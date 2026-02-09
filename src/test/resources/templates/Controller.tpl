@@ -16,7 +16,7 @@ import javax.annotation.Resource;
  * @author AnJia
  */
 @RestController
-@RequestMapping(path = "/api/[(${#strings.toLowerCase(ServiceName)})]", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/book/api/[(${#strings.toLowerCase(ServiceName)})]", produces = MediaType.APPLICATION_JSON_VALUE)
 public class [(${ServiceName})]Controller {
 
     @Resource(name = "[(${#strings.toLowerCase(#strings.substring(ServiceName,0,1))})][(${#strings.substring(ServiceName,1)})]ServiceWorker")

@@ -17,7 +17,7 @@ import java.util.*;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/cache")
+@RequestMapping("/book/api/cache")
 @RequiredArgsConstructor
 public class CacheController {
 

@@ -12,7 +12,7 @@ import java.util.Map;
 
 @Slf4j
 @RestController
-@RequestMapping(path = "/api/fq-signature", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/book/api/fq-signature", produces = MediaType.APPLICATION_JSON_VALUE)
 public class FQEncryptController {
 
     @Resource(name = "fqEncryptWorker")

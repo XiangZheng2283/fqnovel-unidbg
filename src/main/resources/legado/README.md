@@ -34,11 +34,11 @@ java -jar target/unidbg-boot-server-0.0.1-SNAPSHOT.jar
 ### 3. 书源配置说明
 
 #### API 端点映射
-- **搜索**: `/api/fqsearch/books` 
-- **书籍详情**: `/api/fqnovel/book/{bookId}`
-- **书籍目录**: `/api/fqsearch/directory/{bookId}`
-- **章节内容**: `/api/fqnovel/item_id/{itemId}` 或 `/api/fqnovel/chapter/{bookId}/{chapterId}`
-- **批量章节**: `/api/fqnovel/chapters/batch`
+- **搜索**: `/book/api/fqsearch/books` 
+- **书籍详情**: `/book/api/fqnovel/book/{bookId}`
+- **书籍目录**: `/book/api/fqsearch/directory/{bookId}`
+- **章节内容**: `/book/api/fqnovel/item_id/{itemId}` 或 `/book/api/fqnovel/chapter/{bookId}/{chapterId}`
+- **批量章节**: `/book/api/fqnovel/chapters/batch`
 
 #### 关键参数
 - `bookId`: 书籍唯一标识

@@ -22,7 +22,7 @@ import java.util.concurrent.CompletableFuture;
  */
 @Slf4j
 @RestController
-@RequestMapping(path = "/api/fullbook", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/book/api/fullbook", produces = MediaType.APPLICATION_JSON_VALUE)
 public class FullBookDownloadController {
 
     @Autowired
@@ -52,7 +52,7 @@ public class FullBookDownloadController {
 
     /**
      * 全本下载（GET 简化版，支持默认参数）
-     * 示例：GET /api/fullbook/download?bookId=1629221175143432
+     * 示例：GET /book/api/fullbook/download?bookId=1629221175143432
      */
     @GetMapping("/download")
     public Flux<FullBookDownloadResponse> downloadFullBookGet(

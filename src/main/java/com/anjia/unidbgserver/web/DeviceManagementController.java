@@ -20,7 +20,7 @@ import java.util.concurrent.CompletableFuture;
  */
 @Slf4j
 @RestController
-@RequestMapping(path = "/api/device", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/book/api/device", produces = MediaType.APPLICATION_JSON_VALUE)
 public class DeviceManagementController {
 
     @Autowired

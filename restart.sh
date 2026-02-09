@@ -4,7 +4,7 @@ echo "[$(date)] 正在重启项目..."
 
 # 第一步：请求注册接口（无参，生成随机真实设备并写入配置）
 echo "[$(date)] 调用注册接口，写入新设备配置..."
-curl -sf -X POST 'http://localhost:8100/api/device/register-and-restart' \
+curl -sf -X POST 'http://localhost:8100/book/api/device/register-and-restart' \
   -H 'Content-Type: application/json' \
   -d '{}' > /dev/null
 echo "[$(date)] 注册接口调用成功，准备重启进程..."

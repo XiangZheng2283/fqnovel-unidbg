@@ -25,7 +25,7 @@ def html_to_text(raw: str) -> str:
     return text
 
 def fetch_book_info(book_id: str) -> dict:
-    url = f"{BASE}/api/cache/book/{book_id}/info"
+    url = f"{BASE}/book/api/cache/book/{book_id}/info"
     try:
         obj = json.loads(http_get(url))
         return obj
@@ -34,7 +34,7 @@ def fetch_book_info(book_id: str) -> dict:
 
 def fetch_chapter_ids(book_id: str) -> List[str]:
     key = f"book:{book_id}:chapters"
-    url = f"{BASE}/api/cache/value?" + urllib.parse.urlencode({'key': key})
+    url = f"{BASE}/book/api/cache/value?" + urllib.parse.urlencode({'key': key})
     wrap = json.loads(http_get(url))
     val = wrap.get('value') or '[]'
     try:
@@ -45,7 +45,7 @@ def fetch_chapter_ids(book_id: str) -> List[str]:
 
 def fetch_chapter_from_cache(book_id: str, chapter_id: str) -> dict:
     key = f"novel:chapter:{book_id}:{chapter_id}"
-    url = f"{BASE}/api/cache/value?" + urllib.parse.urlencode({'key': key})
+    url = f"{BASE}/book/api/cache/value?" + urllib.parse.urlencode({'key': key})
     wrap = json.loads(http_get(url))
     val = wrap.get('value') or ''
     return json.loads(val) if val else {}

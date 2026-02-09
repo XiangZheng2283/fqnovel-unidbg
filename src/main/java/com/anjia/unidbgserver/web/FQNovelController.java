@@ -24,7 +24,7 @@ import java.util.concurrent.CompletableFuture;
  */
 @Slf4j
 @RestController
-@RequestMapping(path = "/api/fqnovel", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/book/api/fqnovel", produces = MediaType.APPLICATION_JSON_VALUE)
 public class FQNovelController {
 
     @Autowired

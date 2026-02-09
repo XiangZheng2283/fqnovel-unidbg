@@ -11,11 +11,11 @@
 
 
 - 目前实现了
-  - 书籍搜索 --- `/api/fqnovel/fqsearch/book`
-  - 书籍信息 --- `/api/fqnovel/book/{bookId}`
-  - 书籍目录 --- `/api/fqnovel/directory/{bookId}`
-  - 获取单个章节列表 --- `/api/fqnovel/chapter/{bookId}/{chapterId}`
-  - 批量获取章节内容 --- `/api/fqnovel/chapter/batch`
+  - 书籍搜索 --- `/book/api/fqnovel/fqsearch/book`
+  - 书籍信息 --- `/book/api/fqnovel/book/{bookId}`
+  - 书籍目录 --- `/book/api/fqnovel/directory/{bookId}`
+  - 获取单个章节列表 --- `/book/api/fqnovel/chapter/{bookId}/{chapterId}`
+  - 批量获取章节内容 --- `/book/api/fqnovel/chapter/batch`
 
 
 - 需要更多接口的可以自行抓包并编写
@@ -63,7 +63,7 @@
 
 ### 注意事项
 
-- 请不要频繁调用 `获取单个章节列表 --- /api/fqnovel/chapter/{bookId}/{chapterId}` 接口，容易出现 `ILLEGAL_ACCESS`(设备信息风控) 错误，建议使用 `批量获取章节内容 --- /api/fqnovel/chapter/batch` 接口来获取章节内容
+- 请不要频繁调用 `获取单个章节列表 --- /book/api/fqnovel/chapter/{bookId}/{chapterId}` 接口，容易出现 `ILLEGAL_ACCESS`(设备信息风控) 错误，建议使用 `批量获取章节内容 --- /book/api/fqnovel/chapter/batch` 接口来获取章节内容
 
   - 同理 在使用本项目提供的书源配置时，**注意不要缓存书籍章节**，避免频繁调用接口，导致设备信息风控
 
